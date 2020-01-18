@@ -1,0 +1,1 @@
+docker run -d --name web -v tsweb:/var/www  tinysensor-webapp
