@@ -7,6 +7,10 @@ mkdir("/tmp/build-$id");
 chdir("/tmp/build-$id");
 
 $return = exec("cp -r /var/lib/tinysensor/tinySensor .");
+chdir("/tmp/build-$id/tinySensor/");
+shell_exec("git pull --rebase");
+shell_exec("git submodule update");
+
 mkdir("/tmp/build-$id/tinySensor/build");
 chdir("/tmp/build-$id/tinySensor/build");
 
